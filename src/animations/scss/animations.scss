@@ -1,0 +1,16 @@
+.transform__full {
+  transform: scaleY(1) !important;
+  transition: 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.opacity__zero {
+  opacity: 0 !important;
+  transition: 1s cubic-bezier(0.04, 0.82, 0.63, 1.14);
+}
+.opacity__full {
+  opacity: 1 !important;
+  transition: 0.5s ease;
+}
+.menu__item__in {
+  transform: translateY(0px) skew(0) !important;
+  transition: 1.5s cubic-bezier(0.04, 0.82, 0.63, 1.14);
+}

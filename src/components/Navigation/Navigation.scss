@@ -1,0 +1,47 @@
+.nav {
+  height: 12vh;
+  width: 100%;
+  background-color: transparent;
+  padding: 0rem 4rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  // background-color: #191E21;
+  &__content {
+    display: flex;
+    align-items: center;
+    &__logo {
+      font-size: 1.2rem;
+    }
+    &__menu {
+      height: 0.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      margin-left: 1rem;
+      cursor: pointer;
+      transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+      &:hover {
+        .line:nth-child(1) {
+          transform: rotate(10deg);
+        }
+        .line:nth-child(2) {
+          transform: rotate(-7deg);
+        }
+      }
+
+      .line {
+        width: 3.5rem;
+        height: 1.5px;
+        background-color: #fff;
+        border-radius: 2px;
+        transition: 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+    }
+  }
+}

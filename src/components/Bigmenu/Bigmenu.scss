@@ -1,0 +1,120 @@
+.bigmenu {
+  background-color: #fff;
+  height: 85vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10000000;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    .cross {
+      cursor: pointer;
+      position: relative;
+      &:hover {
+        .line {
+          &.line1 {
+            transform: rotate(135deg) scaleX(1);
+          }
+          &.line2 {
+            transform: rotate(45deg) scaleX(0.7);
+          }
+        }
+      }
+      .line {
+        width: 3rem;
+        height: 3px;
+        border-radius: 1rem;
+        background-color: #000000;
+        transform-origin: center;
+        transition: 0.5s cubic-bezier(0.04, 0.82, 0.63, 1.14);
+
+        &.line1 {
+          transform: rotate(135deg) scaleX(0.7);
+          transition: 0.5s cubic-bezier(0.04, 0.82, 0.63, 1.14);
+        }
+        &.line2 {
+          transform: rotate(45deg);
+          transition: 0.5s cubic-bezier(0.04, 0.82, 0.63, 1.14) 0.2s;
+        }
+      }
+    }
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+  &__menu {
+    width: 100%;
+    position: relative;
+    margin-top: 1rem;
+    ul {
+      width: 85%;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+      list-style: none;
+      li {
+        width: 50%;
+        margin-bottom: 2rem;
+        font-size: 4rem;
+        font-weight: 700;
+        transition: 0.5s ease;
+        overflow: hidden;
+
+        a {
+          text-decoration: none;
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: #191e21;
+          color: #191e21;
+          transition: transform 1.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+            color 0.5s ease;
+          display: inline-block;
+          position: relative;
+          padding-bottom: 1rem;
+          transform: translateY(100px) skew(5deg, 3deg);
+
+          &:hover {
+            color: transparent;
+            &::after {
+              transform: scaleX(1);
+            }
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            height: 4px;
+            width: 100%;
+            bottom: 0;
+            background-color: rgba($color: #000000, $alpha: 1);
+            left: 0;
+            transform-origin: left;
+            transition: 0.5s cubic-bezier(0.04, 0.82, 0.63, 1.14);
+            transform: scaleX(0);
+          }
+        }
+      }
+    }
+  }
+  &__copyright {
+    color: rgba($color: #000000, $alpha: 0.5);
+    text-align: center;
+    flex-grow: 1;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+  }
+}

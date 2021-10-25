@@ -1,0 +1,92 @@
+.hero {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  position: relative;
+  &__container {
+    height: 100%;
+    padding: 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    &__text {
+      margin-top: 15%;
+      font-size: 3.7rem;
+      font-weight: 300;
+      width: 70%;
+      display: inline;
+    }
+    &__buttons {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .contact__button {
+        height: 4.8rem;
+        cursor: pointer;
+        width: 14rem;
+        border-radius: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        background-color: #169bf5;
+      }
+      .scroll__button {
+        height: 5rem;
+        width: 5rem;
+        border: 2px solid rgba(255, 255, 255, 0.322);
+        border-radius: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+@media only screen and (max-width:1050px) {
+  .hero{
+    &__container{
+      justify-content: center;
+      &__text{
+        margin-top: 45%;
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (max-width:800px) {
+  .hero{
+    &__container{
+      padding: 0 2rem;
+      &__text{
+        font-size: 3rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width:600px) {
+  .hero{
+    &__container{
+      padding: 0 .5rem;
+      &__text{
+        margin-top: 55%;
+        font-size: 2.7rem;
+        line-height: 1.3;
+      }
+      &__buttons{
+        .contact__button{
+          font-size: 1rem;
+          height: 3.5rem;
+          width: 10rem;
+        }
+        .scroll__button{
+          height: 3rem;
+          width: 3rem;
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}

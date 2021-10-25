@@ -1,0 +1,9 @@
+.footer {
+  width: 100%;
+  min-height: 40vh;
+  position: relative;
+  color: #fff;
+  &__container {
+    padding: 1rem 4rem;
+  }
+}
